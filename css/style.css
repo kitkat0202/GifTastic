@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Farsan|Pompiere');
+
+:root {
+    --marg: 5px;
+    --trans: all 300ms ease-in-out;
+
+    --title: 'Farsan', cursive;
+    --body: 'Pompiere', cursive;
+}
+
+body, html {
+    box-sizing: border-box;
+    font-family: var(--body);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.container-fluid {
+    height: 100vh;
+    /* position: relative; */
+}
+
+.card {
+    margin-top: var(--marg);
+    width: 100%;
+}
+
+.card-header {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-body {
+    padding: var(--marg);
+}
+
+.img-title {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.img-row div img {
+    margin-bottom: 20px;
+}
+
+.img-row div p {
+    font-size: 15px;
+    margin-bottom: 0px;
+    opacity: 0;
+    transition: var(--trans);
+}
+
+.img-row div:hover p {
+    opacity: 1;
+}
+
+.btn {
+    margin: var(--marg);
+    height: 34px;
+    padding: 1px 6px;
+}
+
+label {
+    margin-top: 30px;
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.search-input {
+    width: 100%;
+}
+
+#submit {
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.long-height {
+    height: 100%;
+}
+
+.res-img {
+    width: 100%;
+    margin: var(--marg) auto;
+}
+
+.img-fluid {
+    opacity: .25;
+    transition: var(--trans);
+    border-radius: 30px;
+    border: 5px outset #000;
+}
+
+.img-fluid:hover {
+    border: none;
+    opacity: .5;
+}
