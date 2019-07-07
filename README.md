@@ -9,7 +9,9 @@ Gif project HW #6
 
 In this assignment, you'll use the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
 
-![GIPHY](Images/1-giphy.jpg)
+<!-- ![GIPHY](images/start-page.png) -->
+<img src="images/start-page.png" alt="Finished Index" height="200px"/>
+<img src="images/page.png" alt="Finished Index" height="200px"/>
 
 ### Before You Begin
 
