@@ -11,33 +11,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <!-- BUTTONS -->
-        <div class="card">
-            <div class="card-header">Button History</div>
+    <div class="container">
+        <!-- The search -->
+        <div class="search-div">
+            <h1>Giphy Search</h1>
+            <form>
+                <div class="form-group">
+                    <input class="form-control" id="search-input" placeholder="Search Gify Here">
+                    <button id="submit" class="btn btn-secondary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Search History -->
+        <div id="history-div" class="card disappear">
+            <div class="card-header">Search History</div>
             <div class="card-body">
                 <div class="btn-div"></div>
             </div>
         </div>
 
-        
-        <div class="row">
-            
-            <!-- The Images -->
-            <div class="col-9 img-div"></div>
-
-            <!-- The search -->
-            <div class="col-3">
-                <form>
-                    <div class="form-group">
-                        <label for="search-input">Search For:</label>
-                        <input class="form-control" id="search-input">
-                        <button id="submit" class="btn btn-secondary">Submit</button>
-                    </div>
-                </form>
-            </div>
-
+        <!-- The Images -->
+        <div id="instructions" class="disappear">
+            <span>*To see gify move click on the image</span>
         </div>
+        <div class="img-div"></div>
     </div>
 
 
