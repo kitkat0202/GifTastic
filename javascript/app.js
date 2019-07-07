@@ -27,29 +27,26 @@ $(function() {
 
         let key = "x91xK0YuTl7XYoxf8r50gCfeiEKaiZcj"
         let queryURL = `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${key}&limit=${num}`
-        console.log(queryURL)
+        // console.log(queryURL)
         
         $.ajax({
           url: queryURL,
           method: "GET"
         }).then(function(response) {
             let results = response.data
+            console.log(results);
+            
   
             for (let i = 0; i < results.length; i++) {
                 //as of april 2018 chrome no longer supporste cross-origin dl: https://developers.google.com/web/updates/2018/02/chrome-65-deprecations#block_cross-origin_wzxhzdk5a_download
                 let $gifDiv = $("<div class='col-6 col-sm-3 col-md-2'>")
                 let $pTitle = $("<p>").html("<strong>Title:</strong> " + results[i].title)
                 let $pRate = $("<p>").html("<strong>Rating:</strong> " + results[i].rating.toUpperCase())
-                let $pSource = $("<p>").html("<strong>Source:</strong> <a href='" + results[i].source + "' target ='_blank'>" + results[i].source + "</a>")
+                let $pSource = $("<p>").html("<strong>Source:</strong> <a href='" + results[i].embed_url + "' target ='_blank'>" + results[i].embed_url + "</a>")
                 let $pdiv = $("<div class='img-p'>")
                 let $searchImg = $("<img>").attr("src", results[i].images.fixed_height_still.url).addClass("res-img").attr("data-still", results[i].images.fixed_height_still.url).attr("data-animate", results[i].images.fixed_height.url).attr("data-state", "still")
 
-                if (results[i].source === ""){
-                    $pdiv.append($pTitle, $pRate)
-                } else {
-                    $pdiv.append($pTitle, $pRate, $pSource)
-                }
-
+                $pdiv.append($pTitle, $pRate, $pSource)
                 $gifDiv.append($searchImg, $pdiv)
                 $(".img-title").text(search.toUpperCase())
                 $(".img-row").prepend($gifDiv)
