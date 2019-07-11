@@ -69,23 +69,27 @@ $(function() {
 
         // get input text
         let thisSearch = $("#search-input").val().trim()
-        topics.push(thisSearch)
+        if (thisSearch !== "") {
+            // push this search in to search array
+            topics.push(thisSearch)
 
-        // clear current local storage data and add new string to data
-        localStorage.clear()
-        localStorage.setItem('theTopics', JSON.stringify(topics))
+            // clear current local storage data and add new string to data
+            localStorage.clear()
+            localStorage.setItem('theTopics', JSON.stringify(topics))
 
-        // run the search
-        runSearch(thisSearch)
+            // run the search
+            runSearch(thisSearch)
 
-        // add history div if none
-        if ($("#history-div").hasClass("disappear")) {
-            $("#history-div").removeClass("disappear")
+            // add history div if none
+            if ($("#history-div").hasClass("disappear")) {
+                $("#history-div").removeClass("disappear")
+            }
+
+            // create button and clear input
+            renderButtons()
+            $("#search-input").val("")
         }
 
-        // create button and clear input
-        renderButtons()
-        $("#search-input").val("")
     })
 
 
