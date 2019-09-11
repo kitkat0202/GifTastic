@@ -34,7 +34,7 @@ $(function() {
           method: "GET"
         }).then(function(response) {
             let results = response.data
-            console.log(results);
+            // console.log(results);
             
   
             for (let i = 0; i < results.length; i++) {

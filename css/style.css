@@ -31,6 +31,19 @@ h1 {
     display: none;
 }
 
+.container {
+    max-width: 960px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+    background-color: rgb(183, 201, 180);
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+    background-color: var(--color-theme);
+}
+
+
 /* ////////////////// */
 /* /// Form Style /// */
 /* ////////////////// */
